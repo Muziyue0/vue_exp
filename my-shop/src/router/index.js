@@ -1,3 +1,4 @@
+import { isShallow } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 const router = createRouter({
   history: createWebHistory(),
@@ -57,6 +58,18 @@ const router = createRouter({
       meta: {
         title: "商品列表",
         isTab: true,
+        isShowNav: true,
+        isShowBack: true,
+      },
+    },
+    {
+      path: "/goodsDetail/:id",
+      component: () => import("../pages/GoodsDetail.vue"),
+      props: true,
+      name: "goodsDetail",
+      meta: {
+        title: "商品详情",
+        isTab: false,
         isShowNav: true,
         isShowBack: true,
       },

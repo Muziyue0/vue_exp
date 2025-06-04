@@ -1,7 +1,7 @@
 <template>
     <div class="goods-list">
         <div class="goods-item" v-for="item in goodsList" :key="item.id">
-            <router-link to="">
+            <router-link :to="{ name: 'goodsDetail', params: { id: item.id } }">
                 <van-image width="150" height="150" :src="item.picture" />
                 <h1 class="title">{{ item.name }}<span class="small">{{ item.spec }}</span></h1>
                 <p class="info">
