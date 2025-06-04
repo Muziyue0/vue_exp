@@ -49,6 +49,18 @@ const router = createRouter({
       name: "register",
       meta: { title: "注册", isTab: true, isShowNav: true, isShowBack: true },
     },
+    {
+      path: "/goodslist/:category_id",
+      component: () => import("../pages/GoodsList.vue"),
+      props: true,
+      name: "goodslist",
+      meta: {
+        title: "商品列表",
+        isTab: true,
+        isShowNav: true,
+        isShowBack: true,
+      },
+    },
   ],
 });
 router.beforeEach((to, from, next) => {
