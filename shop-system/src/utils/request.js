@@ -4,7 +4,7 @@ import { ElLoading } from "element-plus";
 import configRL from "../config";
 import notification from "./notification";
 import router from "../router";
-const baseURL = configRL;
+const baseURL = configRL.baseURL;
 
 var loadingInstance = null;
 const service = axios.create({ baseURL });

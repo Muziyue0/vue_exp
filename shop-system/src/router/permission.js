@@ -1,6 +1,8 @@
 import router from "./";
 import useToken from "../stores/token";
 import notification from "../utils/notification";
+
+
 const whiteList = ["/login"];
 router.beforeEach((to, from, next) => {
   document.title = to.meta.title + " - " + "后台管理系统";

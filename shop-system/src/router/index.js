@@ -1,5 +1,5 @@
-import { createWebHistory, createRouter } from 'vue-router' 
-import Index from '../pages/Index.vue' 
+import { createWebHistory, createRouter } from "vue-router";
+import Index from "../pages/Index.vue";
 const router = createRouter({
   history: createWebHistory(),
   routes: [
@@ -13,7 +13,9 @@ const router = createRouter({
           path: "/index",
           name: "index",
           component: () => import("../pages/subpages/Index.vue"),
-          meta: { title: "首页" },
+          meta: {
+            title: "首页",
+          },
         },
         {
           path: "/category",
@@ -43,4 +45,4 @@ const router = createRouter({
     },
   ],
 });
-export default router; 
+export default router;

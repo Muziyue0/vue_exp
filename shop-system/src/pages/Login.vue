@@ -24,6 +24,7 @@
 </template>
 
 <script setup>
+
 import { ref, reactive } from 'vue'
 import { login } from '../api'
 import { useRouter } from 'vue-router'
@@ -47,18 +48,14 @@ const submitForm = formEl => {
         if (valid) {
             const data = await login(form)
             if (data) {
-                //登录成功
                 updateToken(data.token)
                 router.push({ name: 'index' })
-
             }
-            else {
-                //表单填写有误
-                notification({
-                    message: '表单填写有误',
-                    type: 'error'
-                })
-            }
+        } else {
+            notification({
+                message: '表单填写有误',
+                type: 'error'
+            })
         }
     })
 }
