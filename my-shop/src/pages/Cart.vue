@@ -35,7 +35,7 @@
           </div>
           <!-- 左滑删除 -->
           <template #right>
-            <van-button aquare icon="delete" type="danger" class="delete-button" @click="onDelete(item)" />
+            <van-button square icon="delete" type="danger" class="delete-button" @click="onDelete(item)" />
           </template>
         </van-swipe-cell>
       </div>
@@ -179,7 +179,7 @@ const onSubmit = () => {
       }
 
       .delete-button {
-        width: 2rem;
+        width: 3rem;
         height: 100%;
       }
     }
