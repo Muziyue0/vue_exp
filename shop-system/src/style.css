@@ -11,6 +11,11 @@ body {
 #app {
     height: 100%;
 }
+.tox-tinymce-aux {
+    z-index: 5000 !important;  }
 
 a {
     text-decoration: none; }
+
+
+   
